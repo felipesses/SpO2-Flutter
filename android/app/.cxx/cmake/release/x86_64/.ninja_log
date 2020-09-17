@@ -1,0 +1,4 @@
+# ninja log v5
+0	124	0	CMakeFiles/convertImage.dir/home/felipe/FINALFLUTTER/SpO2/ios/Classes/converter.c.o	3efb91fc1808a1a0
+124	202	0	/home/felipe/FINALFLUTTER/SpO2/build/app/intermediates/cmake/release/obj/x86_64/libconvertImage.so	e276d3168d45311
+0	259	0	/home/felipe/FINALFLUTTER/SpO2/build/app/intermediates/cmake/release/obj/x86_64/libconvertImage.so	e276d3168d45311

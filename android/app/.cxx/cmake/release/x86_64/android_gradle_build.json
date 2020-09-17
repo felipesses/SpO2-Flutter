@@ -1,0 +1,38 @@
+
+{
+	"buildFiles" : [ "/home/felipe/FINALFLUTTER/SpO2/android/CMakeLists.txt" ],
+	"cFileExtensions" : [ "c" ],
+	"cleanCommands" : 
+	[
+		"/home/felipe/Android/Sdk/cmake/3.6.4111459/bin/cmake --build /home/felipe/FINALFLUTTER/SpO2/android/app/.cxx/cmake/release/x86_64 --target clean"
+	],
+	"libraries" : 
+	{
+		"convertImage-Release-x86_64" : 
+		{
+			"abi" : "x86_64",
+			"artifactName" : "convertImage",
+			"buildCommand" : "/home/felipe/Android/Sdk/cmake/3.6.4111459/bin/cmake --build /home/felipe/FINALFLUTTER/SpO2/android/app/.cxx/cmake/release/x86_64 --target convertImage",
+			"buildType" : "release",
+			"files" : 
+			[
+				
+				{
+					"flags" : "  --target=x86_64-none-linux-android23 --gcc-toolchain=/home/felipe/Android/Sdk/ndk/21.3.6528147/toolchains/llvm/prebuilt/linux-x86_64 --sysroot=/home/felipe/Android/Sdk/ndk/21.3.6528147/toolchains/llvm/prebuilt/linux-x86_64/sysroot -DconvertImage_EXPORTS  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security  -O2 -DNDEBUG  -fPIC      -c ",
+					"src" : "/home/felipe/FINALFLUTTER/SpO2/ios/Classes/converter.c",
+					"workingDirectory" : "/home/felipe/FINALFLUTTER/SpO2/android/app/.cxx/cmake/release/x86_64"
+				}
+			],
+			"output" : "/home/felipe/FINALFLUTTER/SpO2/build/app/intermediates/cmake/release/obj/x86_64/libconvertImage.so",
+			"toolchain" : "1723847619310699077"
+		}
+	},
+	"toolchains" : 
+	{
+		"1723847619310699077" : 
+		{
+			"cCompilerExecutable" : "/home/felipe/Android/Sdk/ndk/21.3.6528147/toolchains/llvm/prebuilt/linux-x86_64/bin/clang",
+			"cppCompilerExecutable" : "/home/felipe/Android/Sdk/ndk/21.3.6528147/toolchains/llvm/prebuilt/linux-x86_64/bin/clang++"
+		}
+	}
+}
