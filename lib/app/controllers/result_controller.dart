@@ -3,6 +3,7 @@ import 'dart:io';
 import 'package:device_info/device_info.dart';
 import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_modular/flutter_modular.dart';
 import 'package:mobx/mobx.dart';
 import 'package:uuid/uuid.dart';
 part 'result_controller.g.dart';
@@ -24,7 +25,7 @@ abstract class _ResultControllerBase with Store {
   }
 
   @observable
-  bool success = false;
+  bool success;
 
   @action
   sendData(int o2, String obs, double r1) async {
@@ -46,19 +47,50 @@ abstract class _ResultControllerBase with Store {
           "datetime": DateTime.now().toString(),
           "mensuredOnAPP": o2,
           "mensuredOnEQP": o2,
-          // "mobile": Platform.isAndroid
-          //     ? "FL - $manufacturer $modelAndroid"
-          //     : "FL - $version, $name $modelIos",
           "mobile": "FL - $manufacturer $modelAndroid",
           "uid": v4,
           "userInfo": obs,
         },
-      ).then((value) {
-        success = true;
+      ).then((_) {
+        isLoading = false;
+
+        Modular.to.showDialog(
+          barrierDismissible: false,
+          builder: (_) {
+            return AlertDialog(
+              title: Text("Dados registrados"),
+              content: Text("Obrigado!"),
+              actions: [
+                RaisedButton(
+                  child: Text("Fechar"),
+                  onPressed: () {
+                    exit(0);
+                  },
+                )
+              ],
+            );
+          },
+        );
       }).catchError((error) {
         print(error);
         isLoading = false;
-        success = false;
+        Modular.to.showDialog(
+          barrierDismissible: true,
+          builder: (_) {
+            return AlertDialog(
+              title: Text("Erro"),
+              content: Text("Tente novamente"),
+              actions: [
+                RaisedButton(
+                  child: Text("Retornar"),
+                  onPressed: () {
+                    Modular.to.pop();
+                  },
+                )
+              ],
+            );
+          },
+        );
       });
 
       isLoading = false;
@@ -83,12 +115,46 @@ abstract class _ResultControllerBase with Store {
           "uid": v4,
           "userInfo": obs,
         },
-      ).then((value) {
-        success = true;
+      ).then((_) {
+        isLoading = false;
+
+        Modular.to.showDialog(
+          barrierDismissible: false,
+          builder: (_) {
+            return AlertDialog(
+              title: Text("Dados registrados"),
+              content: Text("Obrigado!"),
+              actions: [
+                RaisedButton(
+                  child: Text("Fechar"),
+                  onPressed: () {
+                    exit(0);
+                  },
+                )
+              ],
+            );
+          },
+        );
       }).catchError((error) {
         print(error);
         isLoading = false;
-        success = false;
+        Modular.to.showDialog(
+          barrierDismissible: true,
+          builder: (_) {
+            return AlertDialog(
+              title: Text("Erro"),
+              content: Text("Tente novamente"),
+              actions: [
+                RaisedButton(
+                  child: Text("Retornar"),
+                  onPressed: () {
+                    Modular.to.pop();
+                  },
+                )
+              ],
+            );
+          },
+        );
       });
 
       isLoading = false;

@@ -221,43 +221,6 @@ class _O2ResultAndroidPageState
                           widget.o2, controller.obs.text, widget.r1);
                     } finally {
                       controller.changeLoading(loading: false);
-                      if (controller.success == true) {
-                        Modular.to.showDialog(
-                          barrierDismissible: false,
-                          builder: (_) {
-                            return AlertDialog(
-                              title: Text("Dados registrados"),
-                              content: Text("Obrigado!"),
-                              actions: [
-                                RaisedButton(
-                                  child: Text("Fechar"),
-                                  onPressed: () {
-                                    exit(0);
-                                  },
-                                )
-                              ],
-                            );
-                          },
-                        );
-                      } else {
-                        Modular.to.showDialog(
-                          barrierDismissible: true,
-                          builder: (_) {
-                            return AlertDialog(
-                              title: Text("Erro"),
-                              content: Text("Tente novamente"),
-                              actions: [
-                                RaisedButton(
-                                  child: Text("Retornar"),
-                                  onPressed: () {
-                                    Modular.to.pop();
-                                  },
-                                )
-                              ],
-                            );
-                          },
-                        );
-                      }
                     }
                   },
                 );

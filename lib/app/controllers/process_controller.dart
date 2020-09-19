@@ -27,15 +27,6 @@ abstract class _ProcessControllerBase with Store {
       ? DynamicLibrary.open("libconvertImage.so")
       : DynamicLibrary.process();
   Convert conv;
-  @observable
-  AnimationController animationController;
-
-  @computed
-  String get timerString {
-    Duration duration =
-        animationController.duration * animationController.value;
-    return '${duration.inMinutes}:${(duration.inSeconds % 60).toString().padLeft(2, '0')}';
-  }
 
   @observable
   CameraController camera;
@@ -151,21 +142,14 @@ abstract class _ProcessControllerBase with Store {
     greenAvgList.add(greenAvg);
 
     ++counter;
-    print(counter);
     if (redAvg < 200) {
       counter = 0;
       startTime = DateTime.now().toUtc().millisecondsSinceEpoch;
-      if (animationController.isAnimating && counter == 0) {
-        animationController.stop();
-        animationController.reset();
-      }
     }
 
     int endTime = DateTime.now().toUtc().millisecondsSinceEpoch;
 
     totalTimeInSecs = (endTime - startTime) / 1000;
-
-    print(totalTimeInSecs);
 
     if (totalTimeInSecs >= 30) {
       startTime = DateTime.now().toUtc().millisecondsSinceEpoch;
@@ -178,17 +162,11 @@ abstract class _ProcessControllerBase with Store {
 
       double hrFreq = fft.fft(red, counter, samplingFrequency);
 
-      print('HRFREQ -> $hrFreq');
-
       bpm = (hrFreq * 60).toInt();
 
       double meanR = sumRed / counter;
       // double meanB = (sumBlue / 3) / counter;
       double meanB = sumBlue / counter;
-
-      print("SUM RED -> $sumRed");
-      print("SUM BLUE -> $sumBlue");
-      print("COUNTER FINAL -> $counter");
 
       // Calcula o desvio-padrão das medidas dos componentes vermelho e azul do tecido
 
@@ -199,29 +177,14 @@ abstract class _ProcessControllerBase with Store {
         stdr = stdr + ((bufferr - meanR) * (bufferr - meanR));
       }
 
-      print("STDB -> $stdb");
-      print("STDR -> $stdr");
-
       double varR = math.sqrt(stdr / (counter - 1));
       double varB = math.sqrt(stdb / (counter - 1));
 
-      print('STDB -> $stdb');
-
-      print('STDR -> $stdr');
-      print('VAR R -> $varR');
-      print('VAR B -> $varB');
-
       r1 = (varR / meanR) / (varB / meanB);
-
-      print('R1 -> $r1');
 
       double spo2 = 100 - 5 * r1;
 
-      print('SPO2 -> $spo2');
-
       o2 = spo2.toInt();
-
-      print('O2 -> $o2');
 
       if ((o2 < 30 || o2 > 100) || (bpm < 35 || bpm > 200)) {
         counter = 0;
@@ -248,11 +211,6 @@ abstract class _ProcessControllerBase with Store {
                 ],
               );
       }
-    }
-    if (counter > 0) {
-      animationController.reverse(
-        from: animationController.value == 0 ? 30 : animationController.value,
-      );
     }
   }
 }

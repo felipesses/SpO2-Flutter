@@ -9,30 +9,6 @@ part of 'process_controller.dart';
 // ignore_for_file: non_constant_identifier_names, unnecessary_brace_in_string_interps, unnecessary_lambdas, prefer_expression_function_bodies, lines_longer_than_80_chars, avoid_as, avoid_annotating_with_dynamic
 
 mixin _$ProcessController on _ProcessControllerBase, Store {
-  Computed<String> _$timerStringComputed;
-
-  @override
-  String get timerString =>
-      (_$timerStringComputed ??= Computed<String>(() => super.timerString,
-              name: '_ProcessControllerBase.timerString'))
-          .value;
-
-  final _$animationControllerAtom =
-      Atom(name: '_ProcessControllerBase.animationController');
-
-  @override
-  AnimationController get animationController {
-    _$animationControllerAtom.reportRead();
-    return super.animationController;
-  }
-
-  @override
-  set animationController(AnimationController value) {
-    _$animationControllerAtom.reportWrite(value, super.animationController, () {
-      super.animationController = value;
-    });
-  }
-
   final _$cameraAtom = Atom(name: '_ProcessControllerBase.camera');
 
   @override
@@ -130,13 +106,11 @@ mixin _$ProcessController on _ProcessControllerBase, Store {
   @override
   String toString() {
     return '''
-animationController: ${animationController},
 camera: ${camera},
 cameraInitialized: ${cameraInitialized},
 savedImage: ${savedImage},
 totalTimeInSecs: ${totalTimeInSecs},
-counter: ${counter},
-timerString: ${timerString}
+counter: ${counter}
     ''';
   }
 }

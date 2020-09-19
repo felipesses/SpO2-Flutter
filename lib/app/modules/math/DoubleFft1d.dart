@@ -85,8 +85,6 @@ class DoubleFFt1d {
       cffti();
       rffti();
     }
-
-    print('PLANS -> $plans');
   }
   int getReminder(int n, List<int> factors) {
     int reminder = n;

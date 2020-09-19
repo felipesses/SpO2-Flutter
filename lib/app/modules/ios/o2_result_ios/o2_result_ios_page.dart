@@ -1,7 +1,4 @@
-import 'dart:io';
-
 import 'package:SpO2/app/controllers/result_controller.dart';
-import 'package:SpO2/app/shared/styles.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:flutter_modular/flutter_modular.dart';
@@ -199,69 +196,34 @@ class _O2ResultIosPageState
       ),
       bottomNavigationBar: Padding(
         padding: const EdgeInsets.all(8.0),
-        child: Observer(builder: (_) {
-          return controller.isLoading
-              ? Center(child: CircularProgressIndicator())
-              : RaisedButton(
-                  color: primaryColor,
-                  child: Text(
-                    'ENVIAR DADOS',
-                    style: TextStyle(
-                      color: Colors.white,
-                      letterSpacing: 1.5,
-                      fontSize: 16,
-                      fontWeight: FontWeight.bold,
-                      fontFamily: 'OpenSans',
+        child: Observer(
+          builder: (_) {
+            return controller.isLoading
+                ? Center(child: CircularProgressIndicator())
+                : RaisedButton(
+                    color: primaryColor,
+                    child: Text(
+                      'ENVIAR DADOS',
+                      style: TextStyle(
+                        color: Colors.white,
+                        letterSpacing: 1.5,
+                        fontSize: 16,
+                        fontWeight: FontWeight.bold,
+                        fontFamily: 'OpenSans',
+                      ),
                     ),
-                  ),
-                  onPressed: () async {
-                    try {
-                      controller.changeLoading(loading: true);
-                      await controller.sendData(
-                          widget.o2, controller.obs.text, widget.r1);
-                    } finally {
-                      controller.changeLoading(loading: false);
-                      if (controller.success == true) {
-                        Modular.to.showDialog(
-                          barrierDismissible: false,
-                          builder: (_) {
-                            return AlertDialog(
-                              title: Text("Dados registrados"),
-                              content: Text("Obrigado!"),
-                              actions: [
-                                RaisedButton(
-                                  child: Text("Fechar"),
-                                  onPressed: () {
-                                    exit(0);
-                                  },
-                                )
-                              ],
-                            );
-                          },
-                        );
-                      } else {
-                        Modular.to.showDialog(
-                          barrierDismissible: true,
-                          builder: (_) {
-                            return AlertDialog(
-                              title: Text("Erro"),
-                              content: Text("Tente novamente"),
-                              actions: [
-                                RaisedButton(
-                                  child: Text("Retornar"),
-                                  onPressed: () {
-                                    Modular.to.pop();
-                                  },
-                                )
-                              ],
-                            );
-                          },
-                        );
+                    onPressed: () async {
+                      try {
+                        controller.changeLoading(loading: true);
+                        await controller.sendData(
+                            widget.o2, controller.obs.text, widget.r1);
+                      } finally {
+                        controller.changeLoading(loading: false);
                       }
-                    }
-                  },
-                );
-        }),
+                    },
+                  );
+          },
+        ),
       ),
     );
   }

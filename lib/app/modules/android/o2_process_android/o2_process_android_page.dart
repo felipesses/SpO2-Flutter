@@ -1,19 +1,9 @@
-import 'dart:ffi';
-import 'dart:io';
-import 'dart:typed_data';
-import 'dart:math' as math;
-
-import 'package:SpO2/app/app_controller.dart';
 import 'package:SpO2/app/controllers/process_controller.dart';
-import 'package:SpO2/app/shared/styles.dart';
 import 'package:camera/camera.dart';
-import 'package:ffi/ffi.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:wakelock/wakelock.dart';
-
-import 'package:image/image.dart' as imglib;
 
 import '../styles.dart';
 
@@ -24,33 +14,24 @@ class O2ProcessAndroidPage extends StatefulWidget {
 
 class _O2ProcessAndroidPageState
     extends ModularState<O2ProcessAndroidPage, ProcessController>
-    with WidgetsBindingObserver, TickerProviderStateMixin {
+    with WidgetsBindingObserver {
   @override
   void initState() {
     super.initState();
-    controller.animationController = AnimationController(
-      vsync: this,
-      duration: Duration(seconds: 1),
-    );
     WidgetsBinding.instance.addObserver(this);
   }
 
   @override
   void dispose() {
     WidgetsBinding.instance.removeObserver(this);
-    // Wakelock.toggle(on: false);
     super.dispose();
-
     Wakelock.disable();
     controller.camera.dispose();
-    controller.animationController.dispose();
     controller.cameraInitialized = false;
   }
 
   @override
   void didChangeAppLifecycleState(AppLifecycleState state) {
-    print("APP_STATE: $state");
-
     if (state == AppLifecycleState.resumed) {
       // user returned to our app
       controller.startTime = DateTime.now().toUtc().millisecondsSinceEpoch;
@@ -153,18 +134,15 @@ class _O2ProcessAndroidPageState
                         crossAxisAlignment: CrossAxisAlignment.center,
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          AnimatedBuilder(
-                            animation: controller.animationController,
-                            builder: (_, Widget child) {
-                              return Text(
-                                '${controller.totalTimeInSecs.toInt()}',
-                                style: TextStyle(
-                                  fontWeight: FontWeight.bold,
-                                  fontSize: 18,
-                                ),
-                              );
-                            },
-                          ),
+                          Observer(builder: (_) {
+                            return Text(
+                              '${controller.totalTimeInSecs.toInt()}',
+                              style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                                fontSize: 18,
+                              ),
+                            );
+                          }),
                         ],
                       ),
                     ),
