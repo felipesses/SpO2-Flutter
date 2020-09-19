@@ -39,7 +39,7 @@ class _O2ResultIosPageState
               alignment: Alignment.topLeft,
               child: GestureDetector(
                 onTap: () {
-                  Modular.to.pushNamed('/o2ProcessAndroid');
+                  Modular.to.pushNamed('/o2ProcessIos');
                 },
                 child: Row(
                   children: [

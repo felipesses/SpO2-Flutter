@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:SpO2/app/modules/android/styles.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
@@ -18,7 +20,9 @@ class _AboutPageState extends State<AboutPage> {
             alignment: Alignment.topLeft,
             child: GestureDetector(
               onTap: () {
-                Modular.to.pushReplacementNamed('/');
+                Platform.isAndroid
+                    ? Modular.to.pushReplacementNamed('/o2ProcessAndroid')
+                    : Modular.to.pushReplacementNamed('/o2ProcessIos');
               },
               child: Row(
                 children: [
