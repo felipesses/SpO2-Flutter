@@ -1,4 +1,9 @@
-# SpO2
+<h1 align="center">
+   <br>
+   SpO2
+   <br>
+</h1>
+<p align="center">Aplicativo de medição de SpO2 através da câmera do dispositivo</p>
 
 <p align="center">
   <a href="https://opensource.org/licenses/MIT" rel="nofollow">
