@@ -27,6 +27,7 @@ dependencies:
   wakelock: ^0.1.4+2
   uuid: ^2.2.0
   device_info: '>=0.4.2+7 <2.0.0'
+  flutter_phoenix: ^0.1.0
 
 dev_dependencies:
   flutter_launcher_icons: ^0.8.0
@@ -47,10 +48,11 @@ flutter:
     - images/
 
   uses-material-design: true
-vars: 
-    clean: flutter clean
-    get: flutter pub get
-    runner: flutter pub run build_runner
-scripts: 
-    mobx_build: $clean & $get & $runner build --delete-conflicting-outputs
-    mobx_watch: $clean & $get & $runner watch --delete-conflicting-outputs
+vars:
+  clean: flutter clean
+  get: flutter pub get
+  runner: flutter pub run build_runner
+scripts:
+  mobx_build: $clean & $get & $runner build --delete-conflicting-outputs
+  mobx_watch: $clean & $get & $runner watch --delete-conflicting-outputs
+

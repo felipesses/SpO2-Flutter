@@ -1,1 +1,1 @@
-[1/1] Linking C shared library /home/felipe/FINALFLUTTER/SpO2/build/app/intermediates/cmake/debug/obj/x86/libconvertImage.so
+ninja: no work to do.

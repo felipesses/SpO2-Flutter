@@ -42,8 +42,10 @@ mixin _$ResultController on _ResultControllerBase, Store {
   final _$sendDataAsyncAction = AsyncAction('_ResultControllerBase.sendData');
 
   @override
-  Future sendData(int o2, String obs, double r1) {
-    return _$sendDataAsyncAction.run(() => super.sendData(o2, obs, r1));
+  Future sendData(
+      int o2, int mensured, String obs, double r1, Function onPressed) {
+    return _$sendDataAsyncAction
+        .run(() => super.sendData(o2, mensured, obs, r1, onPressed));
   }
 
   final _$_ResultControllerBaseActionController =

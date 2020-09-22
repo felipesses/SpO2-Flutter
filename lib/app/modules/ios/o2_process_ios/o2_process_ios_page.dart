@@ -55,7 +55,7 @@ class _O2ProcessIosPageState
           children: <Widget>[
             Flexible(
               child: Image.asset(
-                'images/capasprojeto.jpg',
+                'images/capasprojeto.png',
                 fit: BoxFit.fill,
                 alignment: FractionalOffset.topLeft,
                 width: MediaQuery.of(context).size.width,

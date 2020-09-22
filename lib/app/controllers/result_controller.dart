@@ -4,8 +4,11 @@ import 'package:device_info/device_info.dart';
 import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
+import 'package:flutter_phoenix/flutter_phoenix.dart';
 import 'package:mobx/mobx.dart';
 import 'package:uuid/uuid.dart';
+
+import '../../main.dart';
 part 'result_controller.g.dart';
 
 class ResultController = _ResultControllerBase with _$ResultController;
@@ -28,10 +31,13 @@ abstract class _ResultControllerBase with Store {
   bool success;
 
   @action
-  sendData(int o2, String obs, double r1) async {
+  sendData(
+      int o2, int mensured, String obs, double r1, Function onPressed) async {
     var v4 = uuid.v4();
     var androidInfo;
     var iosInfo;
+
+    isLoading = true;
 
     if (Platform.isAndroid) {
       androidInfo = await DeviceInfoPlugin().androidInfo;
@@ -46,8 +52,8 @@ abstract class _ResultControllerBase with Store {
         {
           "datetime": DateTime.now().toString(),
           "mensuredOnAPP": o2,
-          "mensuredOnEQP": o2,
-          "mobile": "FL - $manufacturer $modelAndroid",
+          "mensuredOnEQP": mensured,
+          "mobile": "FESF - $manufacturer $modelAndroid",
           "uid": v4,
           "userInfo": obs,
         },
@@ -56,16 +62,14 @@ abstract class _ResultControllerBase with Store {
 
         Modular.to.showDialog(
           barrierDismissible: false,
-          builder: (_) {
+          builder: (BuildContext context) {
             return AlertDialog(
               title: Text("Dados registrados"),
               content: Text("Obrigado!"),
               actions: [
                 RaisedButton(
-                  child: Text("Fechar"),
-                  onPressed: () {
-                    exit(0);
-                  },
+                  child: Text("Retornar"),
+                  onPressed: onPressed,
                 )
               ],
             );
@@ -110,8 +114,8 @@ abstract class _ResultControllerBase with Store {
         {
           "datetime": DateTime.now().toString(),
           "mensuredOnAPP": o2,
-          "mensuredOnEQP": o2,
-          "mobile": "FL - $version, $name $modelIos",
+          "mensuredOnEQP": mensured,
+          "mobile": "FESF - $version, $name $modelIos",
           "uid": v4,
           "userInfo": obs,
         },
@@ -120,16 +124,14 @@ abstract class _ResultControllerBase with Store {
 
         Modular.to.showDialog(
           barrierDismissible: false,
-          builder: (_) {
+          builder: (BuildContext context) {
             return AlertDialog(
               title: Text("Dados registrados"),
               content: Text("Obrigado!"),
               actions: [
                 RaisedButton(
-                  child: Text("Fechar"),
-                  onPressed: () {
-                    exit(0);
-                  },
+                  child: Text("Retornar"),
+                  onPressed: onPressed,
                 )
               ],
             );
@@ -159,5 +161,6 @@ abstract class _ResultControllerBase with Store {
 
       isLoading = false;
     }
+    isLoading = false;
   }
 }
