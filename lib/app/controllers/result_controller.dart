@@ -33,11 +33,11 @@ abstract class _ResultControllerBase with Store {
   @action
   sendData(
       int o2, int mensured, String obs, double r1, Function onPressed) async {
+    isLoading = true;
+    changeLoading(loading: true);
     var v4 = uuid.v4();
     var androidInfo;
     var iosInfo;
-
-    isLoading = true;
 
     if (Platform.isAndroid) {
       androidInfo = await DeviceInfoPlugin().androidInfo;
@@ -45,8 +45,6 @@ abstract class _ResultControllerBase with Store {
       var modelAndroid = androidInfo.model;
       DatabaseReference _dataRef =
           firebaseDatabase.reference().child('CollectData').child(v4);
-
-      isLoading = true;
 
       _dataRef.set(
         {
@@ -58,8 +56,6 @@ abstract class _ResultControllerBase with Store {
           "userInfo": obs,
         },
       ).then((_) {
-        isLoading = false;
-
         Modular.to.showDialog(
           barrierDismissible: false,
           builder: (BuildContext context) {
@@ -99,6 +95,8 @@ abstract class _ResultControllerBase with Store {
 
       isLoading = false;
     } else if (Platform.isIOS) {
+      isLoading = true;
+
       iosInfo = await DeviceInfoPlugin().iosInfo;
 
       var version = iosInfo.systemVersion;
@@ -120,10 +118,8 @@ abstract class _ResultControllerBase with Store {
           "userInfo": obs,
         },
       ).then((_) {
-        isLoading = false;
-
         Modular.to.showDialog(
-          barrierDismissible: false,
+          barrierDismissible: true,
           builder: (BuildContext context) {
             return AlertDialog(
               title: Text("Dados registrados"),
@@ -158,9 +154,6 @@ abstract class _ResultControllerBase with Store {
           },
         );
       });
-
-      isLoading = false;
     }
-    isLoading = false;
   }
 }

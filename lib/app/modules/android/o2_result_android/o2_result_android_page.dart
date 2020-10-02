@@ -118,7 +118,7 @@ class _O2ResultIosPageState
                 Padding(
                   padding: const EdgeInsets.only(left: 20),
                   child: Text(
-                    'Valor do Oxímetro de dedo: ',
+                    'Valor da oximetria\ndo monitor multiparamétrico: ',
                     style: TextStyle(
                       color: primaryColor,
                       fontWeight: FontWeight.bold,
@@ -210,48 +210,49 @@ class _O2ResultIosPageState
       ),
       bottomNavigationBar: Padding(
         padding: const EdgeInsets.all(8.0),
-        child: Observer(
-          builder: (_) {
-            return controller.isLoading
-                ? Center(
-                    child: CircularProgressIndicator(
-                    backgroundColor: Colors.red,
-                  ))
-                : RaisedButton(
-                    color: primaryColor,
-                    child: Text(
-                      'ENVIAR DADOS',
-                      style: TextStyle(
-                        color: Colors.white,
-                        letterSpacing: 1.5,
-                        fontSize: 16,
-                        fontWeight: FontWeight.bold,
-                        fontFamily: 'OpenSans',
-                      ),
+        child: Observer(builder: (_) {
+          return controller.isLoading == true
+              ? Center(
+                  child: CircularProgressIndicator(
+                    backgroundColor: primaryColor,
+                  ),
+                )
+              : RaisedButton(
+                  color: primaryColor,
+                  child: Text(
+                    'ENVIAR DADOS',
+                    style: TextStyle(
+                      color: Colors.white,
+                      letterSpacing: 1.5,
+                      fontSize: 16,
+                      fontWeight: FontWeight.bold,
+                      fontFamily: 'OpenSans',
                     ),
-                    onPressed: () async {
-                      try {
-                        controller.changeLoading(loading: true);
-                        if (formKey.currentState.validate()) {
-                          formKey.currentState.save();
-                          await controller.sendData(
-                            widget.o2,
-                            int.parse(mensuredController.text),
-                            controller.obs.text,
-                            widget.r1,
-                            () {
-                              Modular.to
-                                  .pushReplacementNamed('/o2ProcessAndroid');
-                            },
-                          );
-                        }
-                      } finally {
-                        controller.changeLoading(loading: false);
+                  ),
+                  onPressed: () async {
+                    try {
+                      controller.changeLoading(loading: true);
+
+                      if (formKey.currentState.validate()) {
+                        formKey.currentState.save();
+
+                        await controller.sendData(
+                          widget.o2,
+                          int.parse(mensuredController.text),
+                          controller.obs.text,
+                          widget.r1,
+                          () {
+                            Modular.to
+                                .pushReplacementNamed('/o2ProcessAndroid');
+                          },
+                        );
                       }
-                    },
-                  );
-          },
-        ),
+                    } finally {
+                      controller.changeLoading(loading: false);
+                    }
+                  },
+                );
+        }),
       ),
     );
   }
