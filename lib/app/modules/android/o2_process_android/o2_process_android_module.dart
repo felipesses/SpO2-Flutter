@@ -11,10 +11,10 @@ class O2ProcessAndroidModule extends ChildModule {
       ];
 
   @override
-  List<Router> get routers => [
-        Router(Modular.initialRoute,
+  List<ModularRouter> get routers => [
+        ModularRouter(Modular.initialRoute,
             child: (_, args) => O2ProcessAndroidPage()),
-        Router('/o2ResultAndroid',
+        ModularRouter('/o2ResultAndroid',
             module: O2ResultAndroidModule(),
             transition: TransitionType.rightToLeft),
       ];

@@ -1,7 +1,11 @@
 [
   {
+    "level": "WARN",
+    "message": "NDK folder \u0027/home/felipe/Android/Sdk/ndk/21.3.6528147\u0027 specified does not contain \u0027platforms\u0027."
+  },
+  {
     "level": "INFO",
-    "message": "Start JSON generation. Platform version: 23 min SDK version: armeabi-v7a"
+    "message": "Start JSON generation. Platform version: 22 min SDK version: armeabi-v7a"
   },
   {
     "level": "INFO",
@@ -13,23 +17,11 @@
   },
   {
     "level": "INFO",
-    "message": "CMake \u00273.10.2\u0027 found in SDK did not match requested version \u00273.6.0\u0027."
-  },
-  {
-    "level": "INFO",
     "message": "- CMake found in SDK at \u0027/home/felipe/Android/Sdk/cmake/3.6.4111459\u0027 had version \u00273.6.0\u0027"
   },
   {
     "level": "INFO",
-    "message": "rebuilding JSON /home/felipe/FINALFLUTTER/SpO2/android/app/.cxx/cmake/debug/armeabi-v7a/android_gradle_build.json due to:"
-  },
-  {
-    "level": "INFO",
-    "message": "- expected json /home/felipe/FINALFLUTTER/SpO2/android/app/.cxx/cmake/debug/armeabi-v7a/android_gradle_build.json file is not present, will remove stale json folder"
-  },
-  {
-    "level": "INFO",
-    "message": "- missing previous command file /home/felipe/FINALFLUTTER/SpO2/android/app/.cxx/cmake/debug/armeabi-v7a/build_command.txt, will remove stale json folder"
+    "message": "rebuilding JSON /home/felipe/projects/SpO2-Flutter/android/app/.cxx/cmake/debug/armeabi-v7a/android_gradle_build.json due to:"
   },
   {
     "level": "INFO",
@@ -37,34 +29,30 @@
   },
   {
     "level": "INFO",
-    "message": "removing stale contents from \u0027/home/felipe/FINALFLUTTER/SpO2/android/app/.cxx/cmake/debug/armeabi-v7a\u0027"
+    "message": "- a dependent build file changed"
   },
   {
     "level": "INFO",
-    "message": "created folder \u0027/home/felipe/FINALFLUTTER/SpO2/android/app/.cxx/cmake/debug/armeabi-v7a\u0027"
+    "message": "  - /home/felipe/FINALFLUTTER/SpO2/android/CMakeLists.txt"
   },
   {
     "level": "INFO",
-    "message": "executing cmake Executable : /home/felipe/Android/Sdk/cmake/3.6.4111459/bin/cmake\narguments : \n-H/home/felipe/FINALFLUTTER/SpO2/android\n-B/home/felipe/FINALFLUTTER/SpO2/android/app/.cxx/cmake/debug/armeabi-v7a\n-DANDROID_ABI\u003darmeabi-v7a\n-DANDROID_PLATFORM\u003dandroid-23\n-DCMAKE_LIBRARY_OUTPUT_DIRECTORY\u003d/home/felipe/FINALFLUTTER/SpO2/build/app/intermediates/cmake/debug/obj/armeabi-v7a\n-DCMAKE_BUILD_TYPE\u003dDebug\n-DANDROID_NDK\u003d/home/felipe/Android/Sdk/ndk/21.3.6528147\n-DCMAKE_TOOLCHAIN_FILE\u003d/home/felipe/Android/Sdk/ndk/21.3.6528147/build/cmake/android.toolchain.cmake\n-DCMAKE_MAKE_PROGRAM\u003d/home/felipe/Android/Sdk/cmake/3.6.4111459/bin/ninja\n-GAndroid Gradle - Ninja\njvmArgs : \n\n"
+    "message": "removing stale contents from \u0027/home/felipe/projects/SpO2-Flutter/android/app/.cxx/cmake/debug/armeabi-v7a\u0027"
   },
   {
     "level": "INFO",
-    "message": "Executable : /home/felipe/Android/Sdk/cmake/3.6.4111459/bin/cmake\narguments : \n-H/home/felipe/FINALFLUTTER/SpO2/android\n-B/home/felipe/FINALFLUTTER/SpO2/android/app/.cxx/cmake/debug/armeabi-v7a\n-DANDROID_ABI\u003darmeabi-v7a\n-DANDROID_PLATFORM\u003dandroid-23\n-DCMAKE_LIBRARY_OUTPUT_DIRECTORY\u003d/home/felipe/FINALFLUTTER/SpO2/build/app/intermediates/cmake/debug/obj/armeabi-v7a\n-DCMAKE_BUILD_TYPE\u003dDebug\n-DANDROID_NDK\u003d/home/felipe/Android/Sdk/ndk/21.3.6528147\n-DCMAKE_TOOLCHAIN_FILE\u003d/home/felipe/Android/Sdk/ndk/21.3.6528147/build/cmake/android.toolchain.cmake\n-DCMAKE_MAKE_PROGRAM\u003d/home/felipe/Android/Sdk/cmake/3.6.4111459/bin/ninja\n-GAndroid Gradle - Ninja\njvmArgs : \n\n"
+    "message": "created folder \u0027/home/felipe/projects/SpO2-Flutter/android/app/.cxx/cmake/debug/armeabi-v7a\u0027"
   },
   {
     "level": "INFO",
-    "message": "done executing cmake"
+    "message": "executing cmake Executable : /home/felipe/Android/Sdk/cmake/3.6.4111459/bin/cmake\narguments : \n-H/home/felipe/projects/SpO2-Flutter/android\n-B/home/felipe/projects/SpO2-Flutter/android/app/.cxx/cmake/debug/armeabi-v7a\n-DANDROID_ABI\u003darmeabi-v7a\n-DANDROID_PLATFORM\u003dandroid-22\n-DCMAKE_LIBRARY_OUTPUT_DIRECTORY\u003d/home/felipe/projects/SpO2-Flutter/build/app/intermediates/cmake/debug/obj/armeabi-v7a\n-DCMAKE_BUILD_TYPE\u003dDebug\n-DANDROID_NDK\u003d/home/felipe/Android/Sdk/ndk/21.3.6528147\n-DCMAKE_TOOLCHAIN_FILE\u003d/home/felipe/Android/Sdk/ndk/21.3.6528147/build/cmake/android.toolchain.cmake\n-DCMAKE_MAKE_PROGRAM\u003d/home/felipe/Android/Sdk/cmake/3.6.4111459/bin/ninja\n-GAndroid Gradle - Ninja\njvmArgs : \n\n"
   },
   {
     "level": "INFO",
-    "message": "write build output /home/felipe/FINALFLUTTER/SpO2/android/app/.cxx/cmake/debug/armeabi-v7a/build_output.txt"
+    "message": "Executable : /home/felipe/Android/Sdk/cmake/3.6.4111459/bin/cmake\narguments : \n-H/home/felipe/projects/SpO2-Flutter/android\n-B/home/felipe/projects/SpO2-Flutter/android/app/.cxx/cmake/debug/armeabi-v7a\n-DANDROID_ABI\u003darmeabi-v7a\n-DANDROID_PLATFORM\u003dandroid-22\n-DCMAKE_LIBRARY_OUTPUT_DIRECTORY\u003d/home/felipe/projects/SpO2-Flutter/build/app/intermediates/cmake/debug/obj/armeabi-v7a\n-DCMAKE_BUILD_TYPE\u003dDebug\n-DANDROID_NDK\u003d/home/felipe/Android/Sdk/ndk/21.3.6528147\n-DCMAKE_TOOLCHAIN_FILE\u003d/home/felipe/Android/Sdk/ndk/21.3.6528147/build/cmake/android.toolchain.cmake\n-DCMAKE_MAKE_PROGRAM\u003d/home/felipe/Android/Sdk/cmake/3.6.4111459/bin/ninja\n-GAndroid Gradle - Ninja\njvmArgs : \n\n"
   },
   {
     "level": "INFO",
-    "message": "write command file /home/felipe/FINALFLUTTER/SpO2/android/app/.cxx/cmake/debug/armeabi-v7a/build_command.txt"
-  },
-  {
-    "level": "INFO",
-    "message": "JSON generation completed without problems"
+    "message": "JSON generation completed with problem. Exception: Build command failed.\nError while executing process /home/felipe/Android/Sdk/cmake/3.6.4111459/bin/cmake with arguments {-H/home/felipe/projects/SpO2-Flutter/android -B/home/felipe/projects/SpO2-Flutter/android/app/.cxx/cmake/debug/armeabi-v7a -DANDROID_ABI\u003darmeabi-v7a -DANDROID_PLATFORM\u003dandroid-22 -DCMAKE_LIBRARY_OUTPUT_DIRECTORY\u003d/home/felipe/projects/SpO2-Flutter/build/app/intermediates/cmake/debug/obj/armeabi-v7a -DCMAKE_BUILD_TYPE\u003dDebug -DANDROID_NDK\u003d/home/felipe/Android/Sdk/ndk/21.3.6528147 -DCMAKE_TOOLCHAIN_FILE\u003d/home/felipe/Android/Sdk/ndk/21.3.6528147/build/cmake/android.toolchain.cmake -DCMAKE_MAKE_PROGRAM\u003d/home/felipe/Android/Sdk/cmake/3.6.4111459/bin/ninja -GAndroid Gradle - Ninja}\n-- Configuring incomplete, errors occurred!\n\nCMake Error at /home/felipe/Android/Sdk/cmake/3.6.4111459/share/cmake-3.6/Modules/CMakeDetermineSystem.cmake:104 (message):\n  Could not find toolchain file:\n  /home/felipe/Android/Sdk/ndk/21.3.6528147/build/cmake/android.toolchain.cmake\nCall Stack (most recent call first):\n  CMakeLists.txt\n\n\nCMake Error: CMAKE_C_COMPILER not set, after EnableLanguage\nCMake Error: CMAKE_CXX_COMPILER not set, after EnableLanguage\n"
   }
 ]

@@ -27,10 +27,6 @@
     },
     {
       "level": "INFO",
-      "message": "Considering /home/felipe/Android/Sdk/ndk/21.0.6113669 in SDK ndk folder"
-    },
-    {
-      "level": "INFO",
       "message": "Rejected /home/felipe/Android/Sdk/ndk-bundle in SDK ndk-bundle folder because that location has no source.properties"
     },
     {

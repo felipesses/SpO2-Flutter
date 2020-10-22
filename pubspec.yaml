@@ -12,7 +12,6 @@ dependencies:
   dio: ^3.0.9
   flutter_mobx: ^1.1.0+1
   mobx: ^1.2.1+1
-  flutter_modular: ^1.2.7+1
   flutter:
     sdk: flutter
   image: ^2.1.12
@@ -20,14 +19,13 @@ dependencies:
   firebase_database: ^4.0.0
   camera:
     git:
-      url: https://github.com/Renesanse/plugins.git
-      path: packages/camera
-      ref: flash_light
+      url: https://github.com/felipesses/camera-repo.git
   fft: ^0.2.0
   wakelock: ^0.1.4+2
   uuid: ^2.2.0
   device_info: '>=0.4.2+7 <2.0.0'
   flutter_phoenix: ^0.1.0
+  flutter_modular: ^2.0.1
 
 dev_dependencies:
   flutter_launcher_icons: ^0.8.0

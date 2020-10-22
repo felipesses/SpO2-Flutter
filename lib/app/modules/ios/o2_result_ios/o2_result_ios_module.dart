@@ -11,8 +11,8 @@ class O2ResultIosModule extends ChildModule {
       ];
 
   @override
-  List<Router> get routers => [
-        Router(
+  List<ModularRouter> get routers => [
+        ModularRouter(
           Modular.initialRoute,
           child: (_, args) => O2ResultIosPage(
             o2: args.data[0],

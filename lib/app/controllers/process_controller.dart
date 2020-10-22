@@ -90,7 +90,7 @@ abstract class _ProcessControllerBase with Store {
 
       cameraInitialized = true;
 
-      camera.flash(true);
+      camera.enableTorch();
     });
   }
 

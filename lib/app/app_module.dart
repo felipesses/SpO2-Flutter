@@ -17,12 +17,12 @@ class AppModule extends MainModule {
       ];
 
   @override
-  List<Router> get routers => [
-        Router('/o2ProcessAndroid', module: O2ProcessAndroidModule()),
-        Router('/o2ProcessIos', module: O2ProcessIosModule()),
-        Router('/o2ResultAndroid', module: O2ResultAndroidModule()),
-        Router('/o2ResultIos', module: O2ResultIosModule()),
-        Router('/about', module: AboutModule()),
+  List<ModularRouter> get routers => [
+        ModularRouter('/o2ProcessAndroid', module: O2ProcessAndroidModule()),
+        ModularRouter('/o2ProcessIos', module: O2ProcessIosModule()),
+        ModularRouter('/o2ResultAndroid', module: O2ResultAndroidModule()),
+        ModularRouter('/o2ResultIos', module: O2ResultIosModule()),
+        ModularRouter('/about', module: AboutModule()),
       ];
 
   @override

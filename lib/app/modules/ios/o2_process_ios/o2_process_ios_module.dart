@@ -11,9 +11,10 @@ class O2ProcessIosModule extends ChildModule {
       ];
 
   @override
-  List<Router> get routers => [
-        Router(Modular.initialRoute, child: (_, args) => O2ProcessIosPage()),
-        Router('/o2ResultIos',
+  List<ModularRouter> get routers => [
+        ModularRouter(Modular.initialRoute,
+            child: (_, args) => O2ProcessIosPage()),
+        ModularRouter('/o2ResultIos',
             module: O2ResultIosModule(),
             transition: TransitionType.rightToLeft),
       ];
