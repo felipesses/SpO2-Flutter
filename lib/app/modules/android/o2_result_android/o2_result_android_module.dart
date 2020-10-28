@@ -7,7 +7,7 @@ import 'o2_result_android_page.dart';
 class O2ResultAndroidModule extends ChildModule {
   @override
   List<Bind> get binds => [
-        Bind((i) => ResultController()),
+        Bind((i) => O2ResultAndroidController()),
       ];
 
   @override

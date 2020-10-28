@@ -6,6 +6,7 @@ import 'package:flutter_modular/flutter_modular.dart';
 import 'package:wakelock/wakelock.dart';
 
 import '../styles.dart';
+import 'o2_process_android_controller.dart';
 
 class O2ProcessAndroidPage extends StatefulWidget {
   @override
@@ -13,7 +14,7 @@ class O2ProcessAndroidPage extends StatefulWidget {
 }
 
 class _O2ProcessAndroidPageState
-    extends ModularState<O2ProcessAndroidPage, ProcessController>
+    extends ModularState<O2ProcessAndroidPage, O2ProcessAndroidController>
     with WidgetsBindingObserver {
   @override
   void initState() {

@@ -1,4 +1,3 @@
-import 'package:SpO2/app/controllers/process_controller.dart';
 import 'package:camera/camera.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
@@ -6,6 +5,7 @@ import 'package:flutter_modular/flutter_modular.dart';
 import 'package:wakelock/wakelock.dart';
 
 import '../styles.dart';
+import 'o2_process_ios_controller.dart';
 
 class O2ProcessIosPage extends StatefulWidget {
   @override
@@ -13,7 +13,7 @@ class O2ProcessIosPage extends StatefulWidget {
 }
 
 class _O2ProcessIosPageState
-    extends ModularState<O2ProcessIosPage, ProcessController>
+    extends ModularState<O2ProcessIosPage, O2ProcessIosController>
     with WidgetsBindingObserver {
   @override
   void initState() {

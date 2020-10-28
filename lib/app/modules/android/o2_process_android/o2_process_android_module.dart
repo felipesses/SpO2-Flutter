@@ -7,7 +7,7 @@ import 'o2_process_android_page.dart';
 class O2ProcessAndroidModule extends ChildModule {
   @override
   List<Bind> get binds => [
-        Bind((i) => ProcessController()),
+        Bind((i) => O2ProcessAndroidController()),
       ];
 
   @override

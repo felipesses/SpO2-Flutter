@@ -6,6 +6,7 @@ import 'package:flutter_modular/flutter_modular.dart';
 import 'package:flutter_phoenix/flutter_phoenix.dart';
 import '../../../app_module.dart';
 import '../styles.dart';
+import 'o2_result_android_controller.dart';
 
 class O2ResultAndroidPage extends StatefulWidget {
   final int o2;
@@ -21,7 +22,7 @@ class O2ResultAndroidPage extends StatefulWidget {
 }
 
 class _O2ResultIosPageState
-    extends ModularState<O2ResultAndroidPage, ResultController> {
+    extends ModularState<O2ResultAndroidPage, O2ResultAndroidController> {
   //use 'controller' variable to access controller
 
   TextEditingController mensuredController = new TextEditingController();

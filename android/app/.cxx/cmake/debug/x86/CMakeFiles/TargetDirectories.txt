@@ -1,0 +1,3 @@
+/home/felipe/projects/SpO2-Flutter/android/app/.cxx/cmake/debug/x86/CMakeFiles/rebuild_cache.dir
+/home/felipe/projects/SpO2-Flutter/android/app/.cxx/cmake/debug/x86/CMakeFiles/edit_cache.dir
+/home/felipe/projects/SpO2-Flutter/android/app/.cxx/cmake/debug/x86/CMakeFiles/convertImage.dir

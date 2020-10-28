@@ -47,7 +47,7 @@
     "buildTargetSet": []
   },
   "abi": "ARM64_V8A",
-  "abiPlatformVersion": 22,
+  "abiPlatformVersion": 23,
   "cxxBuildFolder": "/home/felipe/projects/SpO2-Flutter/android/app/.cxx/cmake/debug/arm64-v8a",
   "jsonFile": "/home/felipe/projects/SpO2-Flutter/android/app/.cxx/cmake/debug/arm64-v8a/android_gradle_build.json",
   "gradleBuildOutputFolder": "/home/felipe/projects/SpO2-Flutter/android/app/.cxx/cxx/debug/arm64-v8a",
