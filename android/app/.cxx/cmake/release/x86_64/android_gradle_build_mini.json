@@ -1,16 +1,16 @@
 {
   "buildFiles": [
-    "/home/felipe/FINALFLUTTER/SpO2/android/CMakeLists.txt"
+    "/home/felipe/projects/SpO2-Flutter/android/CMakeLists.txt"
   ],
   "cleanCommands": [
-    "/home/felipe/Android/Sdk/cmake/3.6.4111459/bin/cmake --build /home/felipe/FINALFLUTTER/SpO2/android/app/.cxx/cmake/release/x86_64 --target clean"
+    "/home/felipe/Android/Sdk/cmake/3.6.4111459/bin/cmake --build /home/felipe/projects/SpO2-Flutter/android/app/.cxx/cmake/release/x86_64 --target clean"
   ],
   "libraries": {
     "convertImage-Release-x86_64": {
       "artifactName": "convertImage",
-      "buildCommand": "/home/felipe/Android/Sdk/cmake/3.6.4111459/bin/cmake --build /home/felipe/FINALFLUTTER/SpO2/android/app/.cxx/cmake/release/x86_64 --target convertImage",
+      "buildCommand": "/home/felipe/Android/Sdk/cmake/3.6.4111459/bin/cmake --build /home/felipe/projects/SpO2-Flutter/android/app/.cxx/cmake/release/x86_64 --target convertImage",
       "abi": "x86_64",
-      "output": "/home/felipe/FINALFLUTTER/SpO2/build/app/intermediates/cmake/release/obj/x86_64/libconvertImage.so"
+      "output": "/home/felipe/projects/SpO2-Flutter/build/app/intermediates/cmake/release/obj/x86_64/libconvertImage.so"
     }
   }
 }

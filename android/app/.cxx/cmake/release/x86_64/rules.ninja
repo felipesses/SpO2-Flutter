@@ -42,7 +42,7 @@ rule C_SHARED_LIBRARY_LINKER__convertImage
 # Rule for re-running cmake.
 
 rule RERUN_CMAKE
-  command = /home/felipe/Android/Sdk/cmake/3.6.4111459/bin/cmake -H/home/felipe/FINALFLUTTER/SpO2/android -B/home/felipe/FINALFLUTTER/SpO2/android/app/.cxx/cmake/release/x86_64
+  command = /home/felipe/Android/Sdk/cmake/3.6.4111459/bin/cmake -H/home/felipe/projects/SpO2-Flutter/android -B/home/felipe/projects/SpO2-Flutter/android/app/.cxx/cmake/release/x86_64
   description = Re-running CMake...
   generator = 1
 

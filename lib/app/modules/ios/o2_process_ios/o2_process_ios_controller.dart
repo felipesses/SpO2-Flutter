@@ -1,6 +1,7 @@
 import 'dart:ffi';
 import 'dart:typed_data';
 import 'dart:math' as math;
+import 'package:image/image.dart' as imgLib;
 
 import 'package:SpO2/app/modules/math/fft.dart';
 import 'package:SpO2/app/shared/components/image_processing.dart';
@@ -93,20 +94,28 @@ abstract class _O2ProcessIosControllerBase with Store {
   @action
   processCameraImage(CameraImage image) async {
     savedImage = image;
+    imgLib.Image img;
 
-    Pointer<Uint8> p2 = allocate(count: savedImage.planes[2].bytes.length);
+    img = imgLib.Image.fromBytes(
+      savedImage.planes[2].bytesPerRow,
+      savedImage.height,
+      savedImage.planes[2].bytes,
+      format: imgLib.Format.bgra,
+    );
 
-    Uint8List pointerList2 = p2.asTypedList(savedImage.planes[2].bytes.length);
+    // Pointer<Uint8> p2 = allocate(count: savedImage.planes[2].bytes.length);
 
-    pointerList2.setRange(
-        0, savedImage.planes[2].bytes.length, savedImage.planes[2].bytes);
+    // Uint8List pointerList2 = p2.asTypedList(savedImage.planes[2].bytes.length);
+
+    // pointerList2.setRange(
+    //     0, savedImage.planes[2].bytes.length, savedImage.planes[2].bytes);
 
     double redAvg;
     double blueAvg;
     double greenAvg;
 
     redAvg = ImageProcessing.decodeYUV420SPtoRedBlueGreenAvg(
-      pointerList2,
+      img.getBytes(),
       176,
       144,
       1,
@@ -115,7 +124,7 @@ abstract class _O2ProcessIosControllerBase with Store {
     sumRed = sumRed + redAvg;
 
     blueAvg = ImageProcessing.decodeYUV420SPtoRedBlueGreenAvg(
-      pointerList2,
+      img.getBytes(),
       176,
       144,
       2,
@@ -124,7 +133,7 @@ abstract class _O2ProcessIosControllerBase with Store {
     sumBlue = sumBlue + blueAvg / 3;
 
     greenAvg = ImageProcessing.decodeYUV420SPtoRedBlueGreenAvg(
-      pointerList2,
+      img.getBytes(),
       176,
       144,
       3,
