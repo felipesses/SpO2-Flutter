@@ -1,2 +1,1 @@
-[1/2] Building C object CMakeFiles/convertImage.dir/home/felipe/projects/SpO2-Flutter/ios/Classes/converter.c.o
-[2/2] Linking C shared library /home/felipe/projects/SpO2-Flutter/build/app/intermediates/cmake/debug/obj/x86_64/libconvertImage.so
+[1/1] Linking C shared library /home/felipe/ffffffffffffffffff/SpO2/build/app/intermediates/cmake/debug/obj/x86_64/libconvertImage.so

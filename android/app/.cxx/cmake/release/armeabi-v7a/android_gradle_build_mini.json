@@ -1,16 +1,16 @@
 {
   "buildFiles": [
-    "/home/felipe/projects/SpO2-Flutter/android/CMakeLists.txt"
+    "/home/felipe/ffffffffffffffffff/SpO2/android/CMakeLists.txt"
   ],
   "cleanCommands": [
-    "/home/felipe/Android/Sdk/cmake/3.6.4111459/bin/cmake --build /home/felipe/projects/SpO2-Flutter/android/app/.cxx/cmake/release/armeabi-v7a --target clean"
+    "/home/felipe/Android/Sdk/cmake/3.6.4111459/bin/cmake --build /home/felipe/ffffffffffffffffff/SpO2/android/app/.cxx/cmake/release/armeabi-v7a --target clean"
   ],
   "libraries": {
     "convertImage-Release-armeabi-v7a": {
       "artifactName": "convertImage",
-      "buildCommand": "/home/felipe/Android/Sdk/cmake/3.6.4111459/bin/cmake --build /home/felipe/projects/SpO2-Flutter/android/app/.cxx/cmake/release/armeabi-v7a --target convertImage",
+      "buildCommand": "/home/felipe/Android/Sdk/cmake/3.6.4111459/bin/cmake --build /home/felipe/ffffffffffffffffff/SpO2/android/app/.cxx/cmake/release/armeabi-v7a --target convertImage",
       "abi": "armeabi-v7a",
-      "output": "/home/felipe/projects/SpO2-Flutter/build/app/intermediates/cmake/release/obj/armeabi-v7a/libconvertImage.so"
+      "output": "/home/felipe/ffffffffffffffffff/SpO2/build/app/intermediates/cmake/release/obj/armeabi-v7a/libconvertImage.so"
     }
   }
 }

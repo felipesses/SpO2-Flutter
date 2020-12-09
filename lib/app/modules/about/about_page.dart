@@ -1,6 +1,4 @@
-import 'dart:io';
-
-import 'package:SpO2/app/modules/android/styles.dart';
+import 'package:SpO2/app/shared/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 
@@ -14,15 +12,12 @@ class _AboutPageState extends State<AboutPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: ListView(
-        // mainAxisAlignment: MainAxisAlignment.start,
         children: <Widget>[
           Align(
             alignment: Alignment.topLeft,
             child: GestureDetector(
               onTap: () {
-                Platform.isAndroid
-                    ? Modular.to.pushReplacementNamed('/o2ProcessAndroid')
-                    : Modular.to.pushReplacementNamed('/o2ProcessIos');
+                Modular.to.pushReplacementNamed('/process');
               },
               child: Row(
                 children: [
@@ -44,7 +39,7 @@ class _AboutPageState extends State<AboutPage> {
             child: Padding(
               padding: const EdgeInsets.only(top: 50),
               child: Image.asset(
-                'images/estimador.png',
+                'assets/images/estimador.png',
                 width: 100,
                 height: 100,
               ),
@@ -69,7 +64,7 @@ class _AboutPageState extends State<AboutPage> {
           ),
           Padding(
             padding: EdgeInsets.symmetric(vertical: 30),
-            child: Image.asset('images/sintomas.jpg'),
+            child: Image.asset('assets/images/sintomas.jpg'),
           ),
         ],
       ),

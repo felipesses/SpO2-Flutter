@@ -8,8 +8,6 @@
     <application
         android:name="io.flutter.app.FlutterApplication"
         android:label="SpO2"
-        android:allowBackup="true"
-        android:roundIcon="@mipmap/logo"
         android:icon="@mipmap/ic_launcher">
         <activity
             android:name=".MainActivity"

@@ -1,10 +1,10 @@
 
 {
-	"buildFiles" : [ "/home/felipe/projects/SpO2-Flutter/android/CMakeLists.txt" ],
+	"buildFiles" : [ "/home/felipe/ffffffffffffffffff/SpO2/android/CMakeLists.txt" ],
 	"cFileExtensions" : [ "c" ],
 	"cleanCommands" : 
 	[
-		"/home/felipe/Android/Sdk/cmake/3.6.4111459/bin/cmake --build /home/felipe/projects/SpO2-Flutter/android/app/.cxx/cmake/debug/armeabi-v7a --target clean"
+		"/home/felipe/Android/Sdk/cmake/3.6.4111459/bin/cmake --build /home/felipe/ffffffffffffffffff/SpO2/android/app/.cxx/cmake/debug/armeabi-v7a --target clean"
 	],
 	"libraries" : 
 	{
@@ -12,18 +12,18 @@
 		{
 			"abi" : "armeabi-v7a",
 			"artifactName" : "convertImage",
-			"buildCommand" : "/home/felipe/Android/Sdk/cmake/3.6.4111459/bin/cmake --build /home/felipe/projects/SpO2-Flutter/android/app/.cxx/cmake/debug/armeabi-v7a --target convertImage",
+			"buildCommand" : "/home/felipe/Android/Sdk/cmake/3.6.4111459/bin/cmake --build /home/felipe/ffffffffffffffffff/SpO2/android/app/.cxx/cmake/debug/armeabi-v7a --target convertImage",
 			"buildType" : "debug",
 			"files" : 
 			[
 				
 				{
-					"flags" : "  --target=armv7-none-linux-androideabi23 --gcc-toolchain=/home/felipe/Android/Sdk/ndk/21.3.6528147/toolchains/llvm/prebuilt/linux-x86_64 --sysroot=/home/felipe/Android/Sdk/ndk/21.3.6528147/toolchains/llvm/prebuilt/linux-x86_64/sysroot -DconvertImage_EXPORTS  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security  -O0 -fno-limit-debug-info  -fPIC      -c ",
-					"src" : "/home/felipe/projects/SpO2-Flutter/ios/Classes/converter.c",
-					"workingDirectory" : "/home/felipe/projects/SpO2-Flutter/android/app/.cxx/cmake/debug/armeabi-v7a"
+					"flags" : "  --target=armv7-none-linux-androideabi21 --gcc-toolchain=/home/felipe/Android/Sdk/ndk/21.3.6528147/toolchains/llvm/prebuilt/linux-x86_64 --sysroot=/home/felipe/Android/Sdk/ndk/21.3.6528147/toolchains/llvm/prebuilt/linux-x86_64/sysroot -DconvertImage_EXPORTS  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security  -O0 -fno-limit-debug-info  -fPIC      -c ",
+					"src" : "/home/felipe/ffffffffffffffffff/SpO2/ios/Classes/converter.c",
+					"workingDirectory" : "/home/felipe/ffffffffffffffffff/SpO2/android/app/.cxx/cmake/debug/armeabi-v7a"
 				}
 			],
-			"output" : "/home/felipe/projects/SpO2-Flutter/build/app/intermediates/cmake/debug/obj/armeabi-v7a/libconvertImage.so",
+			"output" : "/home/felipe/ffffffffffffffffff/SpO2/build/app/intermediates/cmake/debug/obj/armeabi-v7a/libconvertImage.so",
 			"toolchain" : "1723847619310699077"
 		}
 	},

@@ -1,10 +1,4 @@
 # ninja log v5
-0	177	0	CMakeFiles/convertImage.dir/home/felipe/projects/SpO2-Flutter/ios/Classes/converter.c.o	b5d8d80a99f2edbb
-177	271	0	/home/felipe/projects/SpO2-Flutter/build/app/intermediates/cmake/release/obj/armeabi-v7a/libconvertImage.so	f039ae0cf65643b4
-10	171	0	/home/felipe/projects/SpO2-Flutter/build/app/intermediates/cmake/release/obj/armeabi-v7a/libconvertImage.so	f039ae0cf65643b4
-0	64	0	/home/felipe/projects/SpO2-Flutter/build/app/intermediates/cmake/release/obj/armeabi-v7a/libconvertImage.so	f039ae0cf65643b4
-0	50	0	/home/felipe/projects/SpO2-Flutter/build/app/intermediates/cmake/release/obj/armeabi-v7a/libconvertImage.so	f039ae0cf65643b4
-4	182	0	/home/felipe/projects/SpO2-Flutter/build/app/intermediates/cmake/release/obj/armeabi-v7a/libconvertImage.so	f039ae0cf65643b4
-0	90	0	/home/felipe/projects/SpO2-Flutter/build/app/intermediates/cmake/release/obj/armeabi-v7a/libconvertImage.so	f039ae0cf65643b4
-0	38	0	/home/felipe/projects/SpO2-Flutter/build/app/intermediates/cmake/release/obj/armeabi-v7a/libconvertImage.so	f039ae0cf65643b4
-1	83	0	/home/felipe/projects/SpO2-Flutter/build/app/intermediates/cmake/release/obj/armeabi-v7a/libconvertImage.so	f039ae0cf65643b4
+0	153	0	CMakeFiles/convertImage.dir/home/felipe/ffffffffffffffffff/SpO2/ios/Classes/converter.c.o	fc1a86fc45ceb1d
+153	174	0	/home/felipe/ffffffffffffffffff/SpO2/build/app/intermediates/cmake/release/obj/armeabi-v7a/libconvertImage.so	64b217236287e1ab
+11	255	0	/home/felipe/ffffffffffffffffff/SpO2/build/app/intermediates/cmake/release/obj/armeabi-v7a/libconvertImage.so	64b217236287e1ab

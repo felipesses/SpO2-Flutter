@@ -1,28 +1,32 @@
-import 'package:SpO2/app/modules/android/o2_result_android/o2_result_android_module.dart';
-import 'package:SpO2/app/modules/ios/o2_result_ios/o2_result_ios_module.dart';
-
-import 'app_controller.dart';
+import 'package:SpO2/app/modules/o2_process/o2_process_module.dart';
+import 'package:SpO2/app/modules/o2_result/o2_result_module.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:flutter/material.dart';
+import 'package:SpO2/app/app_widget.dart';
 
-import 'app_widget.dart';
 import 'modules/about/about_module.dart';
-import 'modules/android/o2_process_android/o2_process_android_module.dart';
-import 'modules/ios/o2_process_ios/o2_process_ios_module.dart';
 
 class AppModule extends MainModule {
   @override
-  List<Bind> get binds => [
-        Bind((i) => AppController()),
-      ];
+  List<Bind> get binds => [];
 
   @override
   List<ModularRouter> get routers => [
-        ModularRouter('/o2ProcessAndroid', module: O2ProcessAndroidModule()),
-        ModularRouter('/o2ProcessIos', module: O2ProcessIosModule()),
-        ModularRouter('/o2ResultAndroid', module: O2ResultAndroidModule()),
-        ModularRouter('/o2ResultIos', module: O2ResultIosModule()),
-        ModularRouter('/about', module: AboutModule()),
+        ModularRouter(
+          '/process',
+          module: O2ProcessModule(),
+          transition: TransitionType.fadeIn,
+        ),
+        ModularRouter(
+          '/result',
+          module: O2ResultModule(),
+          transition: TransitionType.rightToLeft,
+        ),
+        ModularRouter(
+          '/about',
+          module: AboutModule(),
+          transition: TransitionType.fadeIn,
+        ),
       ];
 
   @override

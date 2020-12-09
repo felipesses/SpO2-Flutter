@@ -1,9 +1,13 @@
-import 'package:SpO2/app/modules/about/about_page.dart';
+import 'about_controller.dart';
 import 'package:flutter_modular/flutter_modular.dart';
+
+import 'about_page.dart';
 
 class AboutModule extends ChildModule {
   @override
-  List<Bind> get binds => [];
+  List<Bind> get binds => [
+        $AboutController,
+      ];
 
   @override
   List<ModularRouter> get routers => [

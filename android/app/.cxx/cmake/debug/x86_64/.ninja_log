@@ -1,7 +1,4 @@
 # ninja log v5
-0	49	0	CMakeFiles/convertImage.dir/home/felipe/projects/SpO2-Flutter/ios/Classes/converter.c.o	9f63a32e5396eb23
-49	72	0	/home/felipe/projects/SpO2-Flutter/build/app/intermediates/cmake/debug/obj/x86_64/libconvertImage.so	e78f266403da80d4
-1	101	0	CMakeFiles/convertImage.dir/home/felipe/projects/SpO2-Flutter/ios/Classes/converter.c.o	9f63a32e5396eb23
-101	155	0	/home/felipe/projects/SpO2-Flutter/build/app/intermediates/cmake/debug/obj/x86_64/libconvertImage.so	e78f266403da80d4
-1	39	0	CMakeFiles/convertImage.dir/home/felipe/projects/SpO2-Flutter/ios/Classes/converter.c.o	9f63a32e5396eb23
-39	77	0	/home/felipe/projects/SpO2-Flutter/build/app/intermediates/cmake/debug/obj/x86_64/libconvertImage.so	e78f266403da80d4
+0	30	0	CMakeFiles/convertImage.dir/home/felipe/ffffffffffffffffff/SpO2/ios/Classes/converter.c.o	d1a8c22fdb562a53
+30	45	0	/home/felipe/ffffffffffffffffff/SpO2/build/app/intermediates/cmake/debug/obj/x86_64/libconvertImage.so	7086b0a81326d8c0
+3	38	0	/home/felipe/ffffffffffffffffff/SpO2/build/app/intermediates/cmake/debug/obj/x86_64/libconvertImage.so	7086b0a81326d8c0
