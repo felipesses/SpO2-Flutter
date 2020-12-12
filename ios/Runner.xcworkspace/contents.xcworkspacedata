@@ -2,6 +2,12 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:/Users/aluno/Downloads/SpO2-Flutter/ios/Runner/converter.c">
+   </FileRef>
+   <FileRef
+      location = "group:/Users/aluno/Downloads/SpO2-Flutter/ios/Runner/converter.h">
+   </FileRef>
+   <FileRef
       location = "group:Runner.xcodeproj">
    </FileRef>
    <FileRef
