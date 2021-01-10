@@ -19,9 +19,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  camera:
-    git:
-      url: https://github.com/felipesses/camera-repo.git
+  camera: ^0.6.3+2
   device_info: ">=0.4.2+7 <2.0.0"
   dio: ^3.0.10
   ffi: ^0.1.3

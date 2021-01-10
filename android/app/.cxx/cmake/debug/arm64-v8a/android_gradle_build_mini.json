@@ -1,16 +1,16 @@
 {
   "buildFiles": [
-    "/home/felipe/ffffffffffffffffff/SpO2/android/CMakeLists.txt"
+    "/home/felipe/SpO2-Flutter/android/CMakeLists.txt"
   ],
   "cleanCommands": [
-    "/home/felipe/Android/Sdk/cmake/3.6.4111459/bin/cmake --build /home/felipe/ffffffffffffffffff/SpO2/android/app/.cxx/cmake/debug/arm64-v8a --target clean"
+    "/home/felipe/Android/Sdk/cmake/3.6.4111459/bin/cmake --build /home/felipe/SpO2-Flutter/android/app/.cxx/cmake/debug/arm64-v8a --target clean"
   ],
   "libraries": {
     "convertImage-Debug-arm64-v8a": {
       "artifactName": "convertImage",
-      "buildCommand": "/home/felipe/Android/Sdk/cmake/3.6.4111459/bin/cmake --build /home/felipe/ffffffffffffffffff/SpO2/android/app/.cxx/cmake/debug/arm64-v8a --target convertImage",
+      "buildCommand": "/home/felipe/Android/Sdk/cmake/3.6.4111459/bin/cmake --build /home/felipe/SpO2-Flutter/android/app/.cxx/cmake/debug/arm64-v8a --target convertImage",
       "abi": "arm64-v8a",
-      "output": "/home/felipe/ffffffffffffffffff/SpO2/build/app/intermediates/cmake/debug/obj/arm64-v8a/libconvertImage.so"
+      "output": "/home/felipe/SpO2-Flutter/build/app/intermediates/cmake/debug/obj/arm64-v8a/libconvertImage.so"
     }
   }
 }

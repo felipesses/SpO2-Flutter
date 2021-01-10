@@ -1,7 +1,7 @@
 Executable : /home/felipe/Android/Sdk/cmake/3.6.4111459/bin/cmake
 arguments : 
 --build
-/home/felipe/ffffffffffffffffff/SpO2/android/app/.cxx/cmake/debug/x86_64
+/home/felipe/SpO2-Flutter/android/app/.cxx/cmake/debug/x86_64
 --target
 convertImage
 jvmArgs : 

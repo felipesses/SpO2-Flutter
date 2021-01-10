@@ -1,13 +1,13 @@
 Executable : /home/felipe/Android/Sdk/cmake/3.6.4111459/bin/cmake
 arguments : 
--H/home/felipe/ffffffffffffffffff/SpO2/android
--B/home/felipe/ffffffffffffffffff/SpO2/android/app/.cxx/cmake/debug/arm64-v8a
+-H/home/felipe/SpO2-Flutter/android
+-B/home/felipe/SpO2-Flutter/android/app/.cxx/cmake/debug/arm64-v8a
 -DANDROID_ABI=arm64-v8a
 -DANDROID_PLATFORM=android-21
--DCMAKE_LIBRARY_OUTPUT_DIRECTORY=/home/felipe/ffffffffffffffffff/SpO2/build/app/intermediates/cmake/debug/obj/arm64-v8a
+-DCMAKE_LIBRARY_OUTPUT_DIRECTORY=/home/felipe/SpO2-Flutter/build/app/intermediates/cmake/debug/obj/arm64-v8a
 -DCMAKE_BUILD_TYPE=Debug
--DANDROID_NDK=/home/felipe/Android/Sdk/ndk/21.3.6528147
--DCMAKE_TOOLCHAIN_FILE=/home/felipe/Android/Sdk/ndk/21.3.6528147/build/cmake/android.toolchain.cmake
+-DANDROID_NDK=/home/felipe/Android/Sdk/ndk/22.0.7026061
+-DCMAKE_TOOLCHAIN_FILE=/home/felipe/Android/Sdk/ndk/22.0.7026061/build/cmake/android.toolchain.cmake
 -DCMAKE_MAKE_PROGRAM=/home/felipe/Android/Sdk/cmake/3.6.4111459/bin/ninja
 -GAndroid Gradle - Ninja
 jvmArgs : 
